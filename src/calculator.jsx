@@ -1,12 +1,19 @@
 var React = require('react');
-
+var Firebase = require('firebase');
+var ReactFireMixin = require('reactfire')
+var ref = new Firebase('https://change-major.firebaseio.com/data/');
 module.exports = React.createClass({
+  mixins:[ReactFireMixin],
   getInitialState: function() {
     return {
       point_A:null,
       point_B:null,
-      point_Result:null
+      point_Result:null,
+      want_major:null
     };
+  },
+  componentWillMount: function() {
+    this.bindAsArray(ref, 'data');
   },
   chg_point_A:function(event){
     this.setState({
@@ -18,8 +25,17 @@ module.exports = React.createClass({
       point_B:event.target.value
     });
   },
+  chg_major:function(event){
+    this.setState({
+      want_major:event.target.value
+    });
+  },
   calculate:function(){
     var point_B_conversion = 0;
+    if(this.state.want_major == null){
+      alert("희망학과를 입력해주세요. \n\n ex)경영학과 or 경영 / 컴퓨터공학과 or 컴공");
+      return;
+    }
     if(this.state.point_B < 33){
       alert("취득학점 33점 미만은 계산할 수 없습니다.");
       return;
@@ -49,7 +65,14 @@ module.exports = React.createClass({
       this.setState({
         point_Result : final_point
       });
+      ref.push({
+        major:this.state.want_major,
+        point_A:this.state.point_A,
+        point_B:this.state.point_B,
+        final_point:final_point
+      });
     }
+
   },
   render:function(){
     return <div className="row">
@@ -58,15 +81,19 @@ module.exports = React.createClass({
               <div className="jumbotron">
                 <h1>한양대 <br/>전과점수 계산기</h1>
                   <div className="form-inline">
-                    <div className="form-group">
+                    <div className="form-group has-warning">
                       평점평균:&nbsp;
                       <input type="number" value={this.state.point_A} onChange={this.chg_point_A} className="form-control" placeholder="평점평균"/>
                   </div>
-                    <div className="form-group">
+                    <div className="form-group has-warning">
                       취득학점:&nbsp;
                       <input type="number" value={this.state.point_B} onChange={this.chg_point_B} className="form-control" placeholder="취득학점"/>
                     </div>
                     <button onClick={this.calculate} className="btn btn-default">계산</button>
+                      <div id="major_input_form" className="form-group has-success">
+                        희망학과&nbsp;&nbsp;
+                        <input id="major_input" type="text" onChange={this.chg_major} value={this.state.want_major} className="form-control"/>
+                      </div>
                     <div>
                     <h3>최종 교과성적점수 : {this.state.point_Result}</h3>
                     </div>
