@@ -7,9 +7,8 @@ var Calculator = require('./calculator');
 module.exports = React.createClass({
   render:function(){
     return <div className="container-fluid layout2_main">
-      <Layout_header/>
-      <Calculator/>
-      {this.props.children}
+      {this.props.children ?
+        this.props.children : <div><Layout_header/><Calculator/></div>}
       <Footer/>
     </div>
   }

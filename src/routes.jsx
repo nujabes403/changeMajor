@@ -6,9 +6,12 @@ var Route = ReactRouter.Route;
 var Link = ReactRouter.Link;
 
 var Layout = require('./layout');
+var Admin = require('./admin');
 
 module.exports = (
   <Router history={new HashHistory}>
-    <Route path="/" component={Layout}></Route>
+    <Route path="/" component={Layout}>
+      <Route path="/admin" component={Admin}/>
+    </Route>
   </Router>
 );
