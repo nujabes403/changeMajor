@@ -41,6 +41,8 @@ module.exports = React.createClass({
         {'/ 평점평균 : ' + item.point_A} &nbsp;
         {'/ 이수학점 : ' + item.point_B} &nbsp;
         {'/ 최종점수 : ' + Math.round(item.final_point)} &nbsp;
+        <br/>
+        {item.date ? ('날짜 : ' + item.date) : ''}
       <button onClick={this.deleteItem} className="btn btn-danger">삭제</button>
       </div>
 
