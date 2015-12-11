@@ -25,6 +25,9 @@ module.exports = React.createClass({
       filter:event.target.value
     });
   },
+  deleteItem:function(){
+    console.log(this.state.data);
+  },
   submitPassword:function(event){
     //Sangheum's House - BUCKET LIST
     if(this.state.password == '8833*'){
@@ -38,7 +41,7 @@ module.exports = React.createClass({
         {'/ 평점평균 : ' + item.point_A} &nbsp;
         {'/ 이수학점 : ' + item.point_B} &nbsp;
         {'/ 최종점수 : ' + Math.round(item.final_point)} &nbsp;
-      <button className="btn btn-danger">삭제</button>
+      <button onClick={this.deleteItem} className="btn btn-danger">삭제</button>
       </div>
 
     });

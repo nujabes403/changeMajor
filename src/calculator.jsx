@@ -65,14 +65,17 @@ module.exports = React.createClass({
       this.setState({
         point_Result : final_point
       });
+      var date = new Date();
+      var date_output = date.getFullYear() + '년 ' + (date.getMonth()+1) + '월 ' + date.getDate() + '일 '
+      + date.getHours() +'시 ' + date.getMinutes() + '분 ';
       ref.push({
         major:this.state.want_major,
         point_A:this.state.point_A,
         point_B:this.state.point_B,
-        final_point:final_point
+        final_point:final_point,
+        date:date_output
       });
     }
-
   },
   render:function(){
     return <div className="row">
@@ -99,7 +102,6 @@ module.exports = React.createClass({
                     </div>
                   </div>
                 </div>
-
           </div>
         </div>
       <div className="col-md-6">
