@@ -476,3 +476,18 @@ padding-top:1px;
 #adminPage_jumbotron{
   height:180px;
 }
+
+.chat_block .panel a{
+
+}
+
+#nickName_input{
+  width:100px;
+}
+#form_bar{
+  background-color:#D9EDF7;
+}
+
+.developer_nick{
+  color:#669922;
+}
