@@ -9,7 +9,8 @@ module.exports = React.createClass({
   render:function(){
     return <div className="container-fluid layout2_main">
       {this.props.children ?
-        this.props.children : <div><Layout_header/><Calculator/><Chat/></div>}
+        this.props.children : <div><Layout_header/><Calculator/></div>}
+        <Chat/>
       <Footer/>
     </div>
   }

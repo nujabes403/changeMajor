@@ -1,6 +1,8 @@
 var React = require('react');
 var Firebase = require('firebase');
 var ReactFireMixin = require('reactfire')
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
 var ref = new Firebase('https://change-major.firebaseio.com/data/');
 module.exports = React.createClass({
   mixins:[ReactFireMixin],
@@ -137,7 +139,13 @@ module.exports = React.createClass({
 ① 동일대학 재학생 우선의 원칙<br/>
 ② 생년월일 연장자 우선순<br/>
 <br/>
-<a href="http://cafe.naver.com/changemajor">2015 한양대학교 전과카페 (12월 25일부터 운영)</a>
+  <Link to="/info"><button className="btn btn-primary" type="button">
+  전과인증 방법 <span className="badge"><i className="fa fa-info"></i></span>
+  </button></Link>
+&nbsp;&nbsp;
+<a href="http://cafe.naver.com/changemajor"><button className="btn btn-info" type="button">
+2015 한양대학교 전과카페 (12월 25일부터 운영)&nbsp;<span className="badge"><i className="fa fa-home"></i></span>
+</button></a>
         </div>
         </div>
     </div>

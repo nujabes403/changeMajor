@@ -334,7 +334,7 @@ text-align: right;
 }
 
 .layout2_header p {
-		color: #aaa;
+		color: black;
 		font-weight: 300;
 }
 
@@ -444,7 +444,7 @@ padding-top:1px;
 }
 .calculator_block .jumbotron{
   background-color: #d9edf7;
-  height:400px;
+  height:435px;
 }
 .side_jumbotron{
 
@@ -490,4 +490,23 @@ padding-top:1px;
 
 .developer_nick{
   color:#669922;
+}
+
+#info_p{
+  color:#bf3000;
+}
+
+#gpa_img{
+  width:500px;
+  height:300px;
+}
+#info_alert{
+  width:200px;
+  text-align:center;
+}
+.info_block{
+
+}
+#panel_etc{
+  background-color: #FCF8E3;
 }
