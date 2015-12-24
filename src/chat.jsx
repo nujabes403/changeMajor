@@ -63,8 +63,17 @@ submitChat:function(){
         });
     } else{
       alert("다른 닉네임을 사용해주세요.");
+      return;
     }
   } else{
+    if(this.state.nickName == null){
+      alert("닉네임을 입력해주세요.");
+      return;
+    }
+    if(this.state.chatMsg == null){
+      alert("메세지를 입력해주세요.");
+      return;
+    }
     var date = new Date();
     var date_for_show = '(' + (date.getMonth()+1) + '.' + date.getDate() + ' / '
     + date.getHours() +':' + date.getMinutes() + ')';
