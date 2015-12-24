@@ -65,11 +65,11 @@ submitChat:function(){
       return;
     }
   } else{
-    if(this.state.nickName == null){
+    if(this.state.nickName == null || this.state.nickName == undefined || this.state.nickName == ''){
       alert("닉네임을 입력해주세요.");
       return;
     }
-    if(this.state.chatMsg == null){
+    if(this.state.chatMsg == null || this.state.chatMsg == undefined || this.state.chatMsg == ''){
       alert("메세지를 입력해주세요.");
       return;
     }
@@ -78,7 +78,7 @@ submitChat:function(){
       return;
     }
     if(this.state.chatMsg.length > 200){
-      alert("메세지가 너무 깁니다.");
+      alert("메시지가 너무 깁니다.");
       return;
     }
     var date = new Date();
