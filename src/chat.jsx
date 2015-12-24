@@ -3,7 +3,6 @@ var Firebase = require('firebase');
 var ReactFireMixin = require('reactfire');
 var Layout_header = require('./layout_header');
 var chat_ref = new Firebase('https://change-major.firebaseio.com/chat/');
-
 module.exports = React.createClass({
   mixins:[ReactFireMixin],
   getInitialState: function() {
@@ -72,6 +71,14 @@ submitChat:function(){
     }
     if(this.state.chatMsg == null){
       alert("메세지를 입력해주세요.");
+      return;
+    }
+    if(this.state.nickName.length > 12){
+      alert("닉네임이 너무 깁니다.");
+      return;
+    }
+    if(this.state.chatMsg.length > 200){
+      alert("메세지가 너무 깁니다.");
       return;
     }
     var date = new Date();
