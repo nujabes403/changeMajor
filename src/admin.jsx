@@ -2,18 +2,30 @@ var React = require('react');
 var Firebase = require('firebase');
 var ReactFireMixin = require('reactfire');
 var ref = new Firebase('https://change-major.firebaseio.com/data/');
+var devRef = new Firebase('https://change-major.firebaseio.com/dev/');
+var passRef = new Firebase('https://change-major.firebaseio.com/pass/');
 module.exports = React.createClass({
   mixins:[ReactFireMixin],
   getInitialState: function() {
     return {
       password:null,
       admin:false,
+      adminForWriting:false,
       output:null,
-      filter:null
+      filter:null,
+      realPass:null,
+      writing:null
     };
   },
   componentWillMount: function() {
+    var that = this;
     this.bindAsArray(ref,'data');
+    this.bindAsArray(devRef,'dev');
+    passRef.once('value',function(snapshot){
+      that.setState({
+        realPass : snapshot.val()
+      });
+    });
   },
   handlePassword:function(event){
     this.setState({
@@ -30,7 +42,7 @@ module.exports = React.createClass({
   },
   submitPassword:function(event){
     //Sangheum's House - BUCKET LIST
-    if(this.state.password == '8833*'){
+    if(this.state.password == this.state.realPass){
       this.setState({
         admin:true
       });
@@ -54,6 +66,43 @@ module.exports = React.createClass({
       alert("비밀번호가 틀렸습니다.");
     }
   },
+  correctPassForWriting:function(){
+    var passInput = prompt("비밀번호를 입력해주세요");
+    if(passInput == this.state.realPass){
+      this.setState({
+        adminForWriting:true
+      });
+    } else{
+      alert("비밀번호가 틀렸습니다.");
+    }
+  },
+  handleWriting:function(e){
+    this.setState({
+      writing:e.target.value
+    });
+  },
+  submitWriting:function(){
+    devRef.push({
+      writing:this.state.writing
+    });
+  },
+  showWritingRaw:function(){
+    var output = this.state.dev.map(function(item){
+      return <li>{item.writing}</li>
+    });
+    return output;
+  },
+  showWritingInput:function(){
+    if(this.state.adminForWriting){
+      return <div className="form-inline">
+        <div className="form-group has-warning">
+          개발일지:&nbsp;
+          <input type="text" value={this.state.writing} onChange={this.handleWriting} className="form-control" placeholder="글 작성"/>
+      </div>
+      <button onClick={this.submitWriting} className="btn btn-primary">글 작성</button>
+  </div>
+  }
+},
   render:function(){
     return <div className="row">
       <div className="col-md-6">
@@ -73,6 +122,13 @@ module.exports = React.createClass({
               </div>
           </div>
         </div>
+      </div>
+      <div className="col-md-6">
+        <h2><i onClick={this.correctPassForWriting} className="fa fa-flask"></i> 개발일지</h2>
+        <ul>
+          {this.showWritingRaw()}
+       </ul>
+       {this.showWritingInput()}
       </div>
     </div>
   }
