@@ -109,8 +109,14 @@ module.exports = React.createClass({
     lectureBeginDate.setFullYear(2016);
     lectureBeginDate.setMonth(2);
     lectureBeginDate.setDate(2);
-    var cnt = lectureBeginDate.getTime() - date.getTime();
-    var day = Math.floor(cnt/(24*60*60*1000));
+    var changeMajorApplyDate = new Date();
+    changeMajorApplyDate.setFullYear(2016);
+    changeMajorApplyDate.setMonth(0);
+    changeMajorApplyDate.setDate(25);
+    var cnt_for_lectureBeginDate = lectureBeginDate.getTime() - date.getTime();
+    var cnt_for_changeMajorDate = changeMajorApplyDate.getTime() - date.getTime();
+    var day_lectureBegin = Math.floor(cnt_for_lectureBeginDate/(24*60*60*1000));
+    var day_changeMajor = Math.floor(cnt_for_changeMajorDate/(24*60*60*1000));
     return <div className="row">
       <div className="col-md-6">
         <div className="calculator_block">
@@ -136,7 +142,8 @@ module.exports = React.createClass({
           {this.showWritingRaw()}
        </ul>
        {this.showWritingInput()}
-       <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개강까지 {day}일 남았습니다.</h5>
+       <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개강까지 {day_lectureBegin}일 남았습니다.</h5>
+       <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전과신청일까지 {day_changeMajor}일 남았습니다.</h5>
       </div>
     </div>
   }
