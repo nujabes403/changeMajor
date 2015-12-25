@@ -21,7 +21,7 @@ module.exports = React.createClass({
     var date_for_show =  (date.getMonth()+1) + '월' + date.getDate() + '일 '
     + date.getHours() +':' + date.getMinutes() + ' 기준 - ';
     noticeRef.set(date_for_show + ' ' + this.state.noticeMsg);
-    this.toggleNoticeBar();
+    this.toggleNticeBar();
   },
   toggleNoticeBar:function(){
     var passInput = prompt('비밀번호를 입력해주세요.');
