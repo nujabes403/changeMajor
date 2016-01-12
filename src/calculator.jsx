@@ -140,13 +140,18 @@ module.exports = React.createClass({
 ① 동일대학 재학생 우선의 원칙<br/>
 ② 생년월일 연장자 우선순<br/>
 <br/>
+  <Link to="/files">
+  <button className="btn btn-warning"><span>자료실로 <i className="fa fa-briefcase"></i></span></button>
+  </Link>
+  &nbsp;&nbsp;
   <Link to="/info"><button className="btn btn-primary" type="button">
   전과인증 방법 <span className="badge"><i className="fa fa-info"></i></span>
   </button></Link>
 &nbsp;&nbsp;
 <a href="http://cafe.naver.com/changemajor"><button className="btn btn-info" type="button">
-2015 한양대학교 전과카페 (12월 25일부터 운영)&nbsp;<span className="badge"><i className="fa fa-home"></i></span>
+2015-16 전과카페&nbsp;<span className="badge"><i className="fa fa-home"></i></span>
 </button></a>
+
         </div>
         </div>
     </div>

@@ -14,9 +14,7 @@ module.exports = React.createClass({
       </div>
 		</nav>
 </header>
-<p>
-  <Link to="/files">자료실로</Link>
-</p>
+-
       </div>
 
   }
