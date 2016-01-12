@@ -7,14 +7,16 @@ module.exports = React.createClass({
       <header>
 		<nav>
       <div className="logo_div">
-        <img className="layout2_logo" src="../assets/imgs/tourism_logo.png"/>
+        <Link to="/"><img className="layout2_logo" src="../assets/imgs/tourism_logo.png"/></Link>
       </div>
       <div>
-        <h3 className="layout2_logo_text">한양대 전과하자</h3>
+        <img id="imgWord_header" src="../assets/imgs/word_header.png"/>
       </div>
 		</nav>
 </header>
-<p>-</p>
+<p>
+  <Link to="/files">자료실로</Link>
+</p>
       </div>
 
   }

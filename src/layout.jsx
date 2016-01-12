@@ -6,16 +6,13 @@ var Footer = require('./footer');
 var Calculator = require('./calculator');
 var Chat = require('./chat');
 var Notice = require('./notice');
-var GoogleAd = require('./googleAd');
 
 module.exports = React.createClass({
   render:function(){
     return <div className="container-fluid layout2_main">
       {this.props.children ?
-        this.props.children : <div><Layout_header/><Calculator/></div>}
-        <Notice/>
+        this.props.children : <div><Layout_header/><Notice/><Calculator/></div>}
         <Chat/>
-        <GoogleAd client="ca-pub-9897177631447876" slot="2272212544" format="rectangle"/>
     <Footer/>
     </div>
   }

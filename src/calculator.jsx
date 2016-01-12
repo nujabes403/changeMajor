@@ -92,7 +92,7 @@ module.exports = React.createClass({
       <div className="col-md-6">
         <div className="calculator_block">
               <div className="jumbotron">
-                <h1>한양대 <br/>전과점수 계산기</h1>
+                <img id="imgWord_calculator" src="../assets/imgs/word_calculator.png"/>
                   <div className="form-inline">
                     <div className="form-group has-warning">
                       평점평균:&nbsp;
@@ -108,7 +108,8 @@ module.exports = React.createClass({
                         <input id="major_input" type="text" onChange={this.chg_major} value={this.state.want_major} className="form-control"/>
                       </div>
                     <div>
-                    <h3>최종 교과성적점수 : {this.state.point_Result}</h3>
+                      <img id="imgWord_calculator_below" src="../assets/imgs/word_calculator_below.png"/>
+                      <p>{this.state.point_Result}</p>
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,4 @@
-var React = require('react')
-
+var React = require('react');
 module.exports = React.createClass({
 	getDefaultProps: function() {
 		return {
@@ -24,4 +23,4 @@ module.exports = React.createClass({
 	componentDidMount: function() {
 		(window.adsbygoogle = window.adsbygoogle || []).push({});
 	}
-})
+});

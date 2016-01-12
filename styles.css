@@ -515,3 +515,36 @@ padding-top:1px;
   text-align:center;
   margin-bottom:0;
 }
+#board_table{
+  background-color:#FFFFFF;
+  margin:0 auto;
+  width:400px;
+  margin-bottom:20px;
+}
+#files_view_header{
+  text-align:center;
+}
+#files_view_contents{
+  margin:0 auto;
+  text-align:center;
+}
+#imgWord_header{
+  width:220px;
+  height:55px;
+}
+#imgWord_calculator{
+  width:450px;
+  height:190px;
+  margin-top:0px;
+  margin-bottom: 20px;
+  padding-right:20px;
+  padding-bottom:20px;
+}
+#imgWord_calculator_below{
+  margin-top:20px;
+  width:200px;
+}
+
+.file_imgs{
+  width:900px;
+}
