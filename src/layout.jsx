@@ -6,6 +6,9 @@ var Footer = require('./footer');
 var Calculator = require('./calculator');
 var Chat = require('./chat');
 var Notice = require('./notice');
+var GoogleAd = require('./googleAd');
+
+// <GoogleAd client="ca-pub-9897177631447876" slot="2272212544" format="rectangle"/>
 
 module.exports = React.createClass({
   render:function(){

@@ -18,7 +18,7 @@ componentWillMount: function() {
   this.bindAsArray(chat_ref,'chatBox');
 
   chat_ref.on("value",function(snapshot){
-    if(snapshot.numChildren() > 100){
+    if(snapshot.numChildren() > 200){
       var idx = 0;
       //Query just first Chat Message
       snapshot.forEach(function(childSnapshot){
@@ -105,7 +105,8 @@ loadChat:function(){
     <br/>
   </li>
   });
-  return chat_output;
+  chat_output_reversed = chat_output.reverse();
+  return chat_output_reversed;
 },
 chatToggle:function(){
   this.setState({

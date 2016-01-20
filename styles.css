@@ -8,209 +8,7 @@ body{
 .container-fluid{
   padding:0px;
 }
-/* Header */
-.header_left{
-  text-align: left;
-}
-.header_right_logo{
-  width:300px;
-  height:30px;
-}
-.header_right{
-text-align: right;
-}
-.header_left_logo{
-  width:200px;
-  height:200px;
-}
-/* Section1 */
-.section_1_main{
-  background-color:#1f374b;
-  width:100%;
-}
-.section_1_jumbotron {
-  background-color:#1f374b;
-  color:#FFF;
-  font-family:'Noto Sans KR','Nanum Gothic',Lato,sans-serif;
-  text-align: center;
-}
-.section_1_jumbotron_h1{
-  font-weight:500;
-  letter-spacing:4px;
-  font-size:3.8em;
-}
-.section_1_jumbotron_h2{
-  font-size: 1.4em;
-  font-weight: 300;
-  letter-spacing: 1.6px;
-  margin-top: 44px;
-}
-.section_1_jumbotron_p{
-  margin-top:70px;
-}
-.section_1_jumbotron_btn{
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-  text-align:center;
-  width:150px;
-}
-.section_1_jumbotron_btn:hover{
 
-}
-/* Section 2 */
-.section_2_jumbotron{
-  background-color:#fff;
-  font-family:'Noto Sans KR','Nanum Gothic',Lato,sans-serif;
-  text-align: center;
-}
-.section_2_jumbotron_h1{
-  font-weight:500;
-  letter-spacing:4px;
-  font-size:3.8em;
-}
-.section_2_jumbotron_h2{
-  font-size: 1.4em;
-  font-weight: 500;
-  letter-spacing: 1.6px;
-  margin-top: 44px;
-}
-.section_2_jumbotron_h3{
-  font-size:25px;
-  font-weight: 500;
-}
-.section_2_jumbotron_btn{
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-.section_2_imgs{
-  width:250px;
-  height:250px;
-}
-/* Section 3 */
-.section_3_main{
-  background-color: black;
-}
-.section_3_jumbotron{
-  background-color:#fff;
-  font-family:'Noto Sans KR','Nanum Gothic',Lato,sans-serif;
-  text-align: center;
-  position:relative;
-  background-image: url('assets/imgs/tourism-f.jpg');
-  background-size: cover;
-  height:700px;
-  margin-bottom:0px;
-}
-.section_3_imgs{
-  width:100%;
-  overflow:hidden;
-  position:absolute;
-  left:0;
-}
-.section_3_text{
-  margin-top: 101px;
-  line-height: 2em;
-  position:absolute;
-  text-align:center;
-  width:100%;
-  letter-spacing: 2px;
-  color:#fff;
-  left:0;
-}
-.section_3_text .quote{
-  margin-top:100px;
-  font-size: 30px;
-  font-weight:500;
-  line-height: 2em;
-}
-
-.section_3_text .quoted{
-    font-size: 1.6em;
-
-}
-/* Section 4 */
-.section_4_main{
-  background-color:#1f374b;
-}
-.section_4_jumbotron{
-  background-color:#1f374b;
-  font-family:'Noto Sans KR','Nanum Gothic',Lato,sans-serif;
-  text-align: center;
-  margin-top:0px;
-  position:relative;
-  color:#fff;
-}
-.section_4_jumbotron_h1{
-  font-weight:500;
-  letter-spacing:4px;
-  font-size:3.8em;
-}
-.section_4_jumbotron_h2{
-  font-size: 1.4em;
-  font-weight: 300;
-  letter-spacing: 1.6px;
-  margin-top: 44px;
-}
-.section_4_jumbotron_h3{
-  font-size:25px;
-  font-weight: 500;
-}
-.section_4_jumbotron_btn{
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-.section_4_imgs{
-  width:250px;
-  height:250px;
-}
-/* Section 5 */
-.section_5_main{
-  background-color:#ffffff;
-  padding-left:70px;
-  color:#1f374b;
-}
-.section_5_jumbotron{
-  background-color:#ffffff;
-  font-family:'Noto Sans KR','Nanum Gothic',Lato,sans-serif;
-  text-align: center;
-  position:relative;
-}
-.section_5_jumbotron_h1{
-  font-weight:500;
-  font-size:50.2px;
-  margin-top:45px;
-}
-.section_5_jumbotron_btn{
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-.section_5_imgs{
-  margin-top:60px;
-  width:250px;
-  height:250px;
-}
-.section_5_jumbotron .row .col-md-3{
-  height:500px;
-}
-.section_5_row_part1{
-  padding-top:110px;
-  padding-left:0px;
-  padding-right:0px;
-}
-.section_5_jumbotron .row .col-md-6{
-  height:500px;
-}
-.section_5_jumbotron ul{
-}
-.section_5_ul_h2{
-  text-align:left;
-  margin-bottom:50px;
-}
-.section_5_ul_imgs{
-  width:70px;
-  height:70px;
-  margin-left:10px;
-  margin-right:40px;
-}
 /* Footer */
 .footer_main{
   background-color: #E9EAEA;
@@ -348,41 +146,6 @@ text-align: right;
 		}
 }
 
-/* What Tourism Block */
-.what_tourism_block{
-  text-align:left;
-  line-height: 270%;
-  background-color: #f0f0f0;
-}
-.what_tourism_block p{
-  font-weight:300;
-}
-.what_tourism_block .jum_sec1 {
-  background-color: #FCF8E3;
-}
-.what_tourism_block .jum_sec2 {
-  background-color: #d9edf7;
-}
-.what_tourism_block .alert_custom1{
-  font-size:18px;
-  font-weight:bold;
-  line-height: 300%;
-}
-.what_tourism_block .alert_custom2{
-  font-size:18px;
-  font-weight:bold;
-  line-height: 300%;
-}
-.what_tourism_block .alert_custom3{
-  font-size:18px;
-  font-weight:bold;
-  line-height: 300%;
-}
-
-.career_tourism_block{
-  text-align:center;
-}
-
 /*Boards Item*/
 .board_container{
   text-align: center;
@@ -392,51 +155,6 @@ text-align: right;
   text-align:center;
 }
 
-.hyu_tourism_block h1{
-  margin-left: 10px;
-  width:280px;
-  border-bottom: 1px solid #EEEEEE;
-}
-.hyu_tourism_block .panel{
-  margin-left:10px;
-  width:800px;
-}
-
-.card{
-  background-color: #EEEEEE;
-  padding-top:5px;
-  margin-left:10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  width:200px;
-  height:400px;
-  color:#FFFFFF;
-  text-align: center;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.card .card_top{
-background-color: #337AB7;
-height:60px;
-padding-top:1px;
-}
-.card .card_img img{
-  width:200px;
-  height:269px;
-}
-.card .card_contents{
-  padding-top:10px;
-  text-align: left;
-  margin-left:5px;
-  color:black;
-}
-.professor_tourism_block .panel{
-  width:600px;
-  text-align:center;
-  margin : 10px auto;
-}
-.professor_tourism_block .panel .panel-heading{
-  padding: 3px 3px 3px 3px;
-}
 .calculator_block{
   text-align:center;
   width:550px;
@@ -457,19 +175,6 @@ padding-top:1px;
   margin-top:60px;
 }
 
-@media (max-width:1000px) {
-  .calculator_block{
-    width:800px;
-    margin:0 auto;
-  }
-  .side_jumbotron{
-    margin:0 auto;
-    width:800px;
-  }
-}
-#major_input_form{
-  margin-top:20px;
-}
 #major_input{
   width:100px;
 }
@@ -546,6 +251,39 @@ padding-top:1px;
   width:200px;
 }
 
+#major_input{
+  width:100px;
+}
 .file_imgs{
   width:900px;
+}
+
+.calculator_block .form-inline .form-control {
+  display:inline;
+}
+
+@media (max-width:1000px) {
+  .calculator_block{
+    width:800px;
+    margin:0 auto;
+  }
+  .side_jumbotron{
+    margin:0 auto;
+    width:800px;
+  }
+}
+
+@media (max-width:768px){
+  .calculator_block .form-inline{
+    padding:0;
+  }
+  .calculator_block .form-inline .form-control {
+    display:inline;
+  }
+  .calculator_block #calculator_button{
+    display:inline;
+  }
+  .side_jumbotron{
+    display:none;
+  }
 }
